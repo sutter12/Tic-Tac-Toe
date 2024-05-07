@@ -98,21 +98,21 @@ def recordPlay(player):
     spaces[row][col] = player   
 
 def checkWinner():
-    #Top row all same
+    # Top row all same
     if spaces[0][0] == spaces[0][1] and spaces[0][1] == spaces[0][2] and spaces[0][0] != '' and spaces[0][1] != '' and spaces[0][2] != '':
         print("Winner1")
         if spaces[0][0] == 'x':
             print("X Wins")
         elif spaces[0][0] == 'o': 
             print("O Wins")
-    #Center row all same
+    # Center row all same
     elif spaces[1][0] == spaces[1][1] and spaces[1][1] == spaces[1][2] and spaces[1][0] != '' and spaces[1][1] != '' and spaces[1][2] != '':
         print("Winner2")
         if spaces[1][0] == 'x':
             print("X Wins")
         elif spaces[1][0] == 'o': 
             print("O Wins")
-    #Bottom row all same
+    # Bottom row all same
     elif spaces[2][0] == spaces[2][1] and spaces[2][1] == spaces[2][2] and spaces[2][0] != '' and spaces[2][1] != '' and spaces[2][2] != '':
         print("Winner3")
         if spaces[2][0] == 'x':
@@ -120,21 +120,21 @@ def checkWinner():
         elif spaces[2][0] == 'o': 
             print("O Wins")
     
-    #Left Column all same
+    # Left Column all same
     elif spaces[0][0] == spaces[1][0] and spaces[1][0] == spaces[2][0] and spaces[0][0] != '' and spaces[1][0] != '' and spaces[2][0] != '':
         print("Winner4")
         if spaces[0][0] == 'x':
             print("X Wins")
         elif spaces[0][0] == 'o': 
             print("O Wins")
-    #Middle Column all same
+    # Middle Column all same
     elif spaces[0][1] == spaces[1][1] and spaces[1][1] == spaces[2][1] and spaces[0][1] != '' and spaces[1][1] != '' and spaces[2][1] != '':
         print("Winner5")
         if spaces[1][0] == 'x':
             print("X Wins")
         elif spaces[1][0] == 'o': 
             print("O Wins")
-    #Right Column all same
+    # Right Column all same
     elif spaces[0][2] == spaces[1][2] and spaces[1][2] == spaces[2][2] and spaces[0][2] != '' and spaces[1][2] != '' and spaces[2][2] != '':
         print("Winner6")
         if spaces[2][0] == 'x':
@@ -142,14 +142,14 @@ def checkWinner():
         elif spaces[2][0] == 'o': 
             print("O Wins")
     
-    #Top Left to Bottom Right Diagonal all same
+    # Top Left to Bottom Right Diagonal all same
     elif spaces[0][0] == spaces[1][1] and spaces[1][1] == spaces[2][2] and spaces[0][0] != '' and spaces[1][1] != '' and spaces[2][2] != '':
         print("Winner7")
         if spaces[1][1] == 'x':
             print("X Wins")
         elif spaces[1][1] == 'o': 
             print("O Wins")
-    #Bottom Left to Top Right all same
+    # Bottom Left to Top Right all same
     elif spaces[0][2] == spaces[1][1] and spaces[1][1] == spaces[2][0] and spaces[0][2] != '' and spaces[1][1] != '' and spaces[2][0] != '':
         print("Winner8")
         if spaces[1][1] == 'x':
@@ -166,7 +166,7 @@ def playGame(x, y):
     t.penup()
     t.goto(x, y)
     
-    #correcting position of click to make it perfect
+    # correcting position of click to make it perfect
     Position = correctPosition(x, y)
     
     if(count % 2 == 0):
